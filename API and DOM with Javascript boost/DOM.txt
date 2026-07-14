@@ -1,0 +1,18 @@
+// DOM (Document Object Model) হলো একটি Programming Interface, যার মাধ্যমে JavaScript HTML ডকুমেন্টকে পড়তে, পরিবর্তন করতে এবং নিয়ন্ত্রণ করতে পারে।
+
+// সহজ ভাষায়, DOM হলো HTML পেজের একটি গাছ (Tree) আকারের কাঠামো, যেখানে প্রতিটি HTML tag একটি Node হিসেবে থাকে। JavaScript এই Node-গুলোকে ব্যবহার করে ওয়েবপেজে পরিবর্তন আনে।
+
+
+// এখানে JavaScript, DOM-এর মাধ্যমে <h1>-এর লেখাকে "Hello World" থেকে "Hello DOM" করে দিয়েছে।
+
+// DOM দিয়ে কী কী করা যায়?
+// HTML Element নির্বাচন করা।
+// লেখা (Text) পরিবর্তন করা।
+// CSS Style পরিবর্তন করা।
+// নতুন Element যোগ করা।
+// Element মুছে ফেলা।
+// Button Click, Keyboard Input ইত্যাদি Event নিয়ন্ত্রণ করা।
+
+// সংক্ষেপে:
+// DOM = HTML + JavaScript-এর মধ্যে সংযোগ।
+// JavaScript DOM ব্যবহার করে ওয়েবপেজকে ডাইনামিক বা পরিবর্তনযোগ্য করে তোলে।
