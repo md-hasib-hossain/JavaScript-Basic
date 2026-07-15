@@ -57,7 +57,7 @@ const displayData = (Userdata) => {                        // displayData is a f
     Userdata.forEach(user => {                              // loop through the data
         console.log(user);                                   // log the name of each user to the console
 
-        const div = documrent.createElement("div");                       // create a new div element
+        const div = document.createElement("div");                       // create a new div element
         div.innerHTML  = `
         <h3>Name: ${user.name}</h3>
         <p>Email: ${user.email}</p>
