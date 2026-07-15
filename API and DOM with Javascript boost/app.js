@@ -28,7 +28,7 @@ document.getElementById("hendeladd").addEventListener("click", (event) => {  // 
 
     const p = document.createElement("p");      // create a new paragraph element
     p.innerText = inputbox;                         // set the text of the new paragraph element to the value of the input box
-    
+
     container.appendChild(p);   // append the new paragraph element to the container
 
 
@@ -37,6 +37,42 @@ document.getElementById("hendeladd").addEventListener("click", (event) => {  // 
 // const handelsearch = (event) => {
 //     console.log("Hello Boss");
 // }
+
+
+
+
+
+fetch("https://jsonplaceholder.typicode.com/users")  // fetch is used to get data from the API
+    .then((response) => response.json())                // convert the response to JSON
+    .then(data => {                                     // data is the JSON data
+        // console.log(data);
+        displayData(data);                              // log the data to the console
+    })
+    .catch((error) => {                                 // catch any errors that occur during the fetch
+        console.log(error);                             // log the error to the console
+    });
+
+const displayData = (Userdata) => {                        // displayData is a function that takes in data as a parameter
+    const container = document.getElementById("UserData_container")  // get the container where we want to add the new elements
+    Userdata.forEach(user => {                              // loop through the data
+        console.log(user);                                   // log the name of each user to the console
+
+        const div = documrent.createElement("div");                       // create a new div element
+        div.innerHTML  = `
+        <h3>Name: ${user.name}</h3>
+        <p>Email: ${user.email}</p>
+        <p>Phone: ${user.phone}</p>
+        <p>Website: ${user.website}</p>
+        <p>Company: ${user.company.name}</p>
+        <p>Address: ${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode}</p>
+        `;
+        // const div = document.createElement("div");
+        // div.innerText = user.name;
+        // container.appendChild(div);
+    });
+}
+
+
 
 
 
