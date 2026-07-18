@@ -1,0 +1,165 @@
+/* Color Palette Mapping from Image */
+:root {
+    --bg-dark-sidebar: #0a1931;
+    --navy-txt: #152238;
+    
+    /* Dynamic Dashboard Metric Visual Accents */
+    --clr-blue: #1976d2;      --bg-blue: #eef5ff;      --brd-blue: #bce0ff;
+    --clr-green: #2e7d32;     --bg-green: #e8f8f0;     --brd-green: #b7ebd0;
+    --clr-orange: #ef6c00;    --bg-orange: #fff9ec;    --brd-orange: #ffe8cc;
+    --clr-red: #c62828;       --bg-red: #fff5f5;       --brd-red: #ffd3d3;
+    --clr-purple: #6a1b9a;    --bg-purple: #f4f0fa;    --brd-purple: #e1d5f2;
+    --clr-cyan: #00838f;      --bg-cyan: #eaf6fa;      --brd-cyan: #bee5f2;
+    --clr-teal: #00695c;      --bg-teal: #eafaf7;      --brd-teal: #bfeee4;
+    --clr-yellow: #f9a825;    --bg-yellow: #fff9db;    --brd-yellow: #ffe066;
+    --clr-magenta: #ad1457;   --bg-magenta: #fce4ec;   --brd-magenta: #f8bbd0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: #f8fafc;
+}
+
+/* Base Wrapper Architecture */
+.app-wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar Navigation System UI */
+.sidebar-menu {
+    width: 75px;
+    background-color: var(--bg-dark-sidebar);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+.sidebar-menu .nav-link {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1.35rem;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    background: none;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+.sidebar-menu .nav-link:hover, 
+.sidebar-menu .nav-link.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.content-viewport {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Top Navigation App Header */
+.top-system-bar {
+    background-color: #0d1e3d;
+    height: 70px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.user-badge-hq {
+    background: #ffffff;
+    color: #0d1e3d;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+.status-indicator .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* DYNAMIC PREMIUM CARDS RENDERING METRICS */
+.premium-card {
+    background: #ffffff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    min-height: 100px;
+    padding: 16px;
+    border: 1px solid transparent;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.premium-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.premium-card .icon-circle {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+.premium-card h2 {
+    font-size: 1.6rem !important;
+    font-weight: 700;
+}
+.section-title {
+    font-size: 0.95rem;
+    border-left: 4px solid;
+    line-height: 1;
+}
+
+/* Assigning Explicit Palette Variations from context */
+.card-border-blue { background-color: var(--bg-blue); border-color: var(--brd-blue); }
+.card-border-green { background-color: var(--bg-green); border-color: var(--brd-green); }
+.card-border-orange { background-color: var(--bg-orange); border-color: var(--brd-orange); }
+.card-border-red { background-color: var(--bg-red); border-color: var(--brd-red); }
+.card-border-purple { background-color: var(--bg-purple); border-color: var(--brd-purple); }
+.card-border-cyan { background-color: var(--bg-cyan); border-color: var(--brd-cyan); }
+.card-border-teal { background-color: var(--bg-teal); border-color: var(--brd-teal); }
+.card-border-yellow { background-color: var(--bg-yellow); border-color: var(--brd-yellow); }
+.card-border-magenta { background-color: var(--bg-magenta); border-color: var(--brd-magenta); }
+
+.text-blue { color: var(--clr-blue); }
+.text-green { color: var(--clr-green); }
+.text-orange { color: var(--clr-orange); }
+.text-red { color: var(--clr-red); }
+.text-purple { color: var(--clr-purple); }
+.text-cyan { color: var(--clr-cyan); }
+.text-teal { color: var(--clr-teal); }
+.text-yellow { color: var(--clr-yellow); }
+.text-magenta { color: var(--clr-magenta); }
+
+.bg-blue { background-color: var(--clr-blue); }
+.bg-green { background-color: var(--clr-green); }
+.bg-orange { background-color: var(--clr-orange); }
+.bg-red { background-color: var(--clr-red); }
+.bg-purple { background-color: var(--clr-purple); }
+.bg-cyan { background-color: var(--clr-cyan); }
+.bg-teal { background-color: var(--clr-teal); }
+.bg-yellow { background-color: var(--clr-yellow); }
+.bg-magenta { background-color: var(--clr-magenta); }
+
+/* Internal Grid Products Cards */
+.catalog-item-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+    text-align: center;
+    padding: 12px;
+}
+.catalog-item-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
